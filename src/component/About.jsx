@@ -31,7 +31,7 @@ const About = () => {
             
             <h2 className="text-[#1a2e4c] text-4xl md:text-5xl font-serif font-bold leading-tight">
               A Legacy of <br /> 
-              <span className="text-[#d4a34d]">Academic Excellence</span>
+              <span className="text-[#d4a34d]">Academic Excellences</span>
             </h2>
 
             <div className="space-y-4 text-gray-600 leading-relaxed text-sm md:text-base">
