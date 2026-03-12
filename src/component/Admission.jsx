@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Admission = () => {
   return (
-    <section id="admission1" className="relative py-24 bg-[#2e5185] overflow-hidden">
+    <section id="admission1" className="relative py-24 bg-[#1a2e4c] overflow-hidden">
       {/* Background Decorative Element (Optional subtle glow) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(212,163,77,0.05)_0%,_transparent_70%)] pointer-events-none" />
 

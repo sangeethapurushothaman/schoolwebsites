@@ -4,6 +4,7 @@ import About from "../component/About";
 import Our_Programs from "../component/Programs";
 import Testimonial from"../component/Testimonial";
 import Begin_Journey from "../component/Admission";
+
 const Singlepage = ()=>{
 return(
 
@@ -12,7 +13,9 @@ return(
 <About/>
 <Our_Programs/>
 <Testimonial/>
+
 <Begin_Journey/>
+
   </main>
 );
 
