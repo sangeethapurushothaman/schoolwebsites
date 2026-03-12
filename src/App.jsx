@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
      
       <Header/>
-      
+
         <Routes>
           <Route path="/" element={<Singlepage />} />
           <Route path="/LegalPage" element={<LegalPage />} />
