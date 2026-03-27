@@ -5,9 +5,7 @@ import Header from "./component/Header";
 import Footer from "./component/Footer";
 import LegalPage from "./pages/LegalPage";
 import ApplicationForm from "./pages/ApplicationForm";
-
-
-
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -20,6 +18,7 @@ function App() {
           <Route path="/" element={<Singlepage />} />
           <Route path="/LegalPage" element={<LegalPage />} />
           <Route path="/application-form" element={<ApplicationForm />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
 
         <Footer/>

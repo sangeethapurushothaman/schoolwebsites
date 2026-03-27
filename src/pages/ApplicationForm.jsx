@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, CheckCircle, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const ApplicationForm = () => {
   const navigate = useNavigate();
@@ -24,13 +25,19 @@ const ApplicationForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your submit logic here (e.g., Axios post to your backend)
-    console.log("Form Submitted:", formData);
-    alert("Application Submitted Successfully!");
-    navigate('/'); // Redirect home after submission
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await axios.post('http://localhost:3000/api/apply', formData);
+    if (response.status === 201) {
+      alert("விண்ணப்பம் சமர்ப்பிக்கப்பட்டது!");
+      navigate('/');
+    }
+  } catch (error) {
+    console.error("பிழை:", error);
+    alert("சமர்ப்பிப்பதில் தோல்வி!");
+  }
+};
 
   return (
     <div className="min-h-screen bg-stone-50 pb-20 px-6 pt-32"> {/* pt-32 ensures space for your Header */}
